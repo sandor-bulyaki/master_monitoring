@@ -43,5 +43,10 @@ services:
       - "traefik.http.routers.authelia.tls.certresolver=leresolver"
     restart: always
 
+networks:
+  default:
+    external: true
+    name: dochub-network
+
 volumes:
   traefik_letsencrypt:
